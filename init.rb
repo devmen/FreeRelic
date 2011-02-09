@@ -1,0 +1,2 @@
+require 'free_relic'
+
