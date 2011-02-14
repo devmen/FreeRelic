@@ -1,12 +1,23 @@
 FreeRelic
 =========
 
-Introduction goes here.
+Installion
+$ rake install
 
-Example
+Usage
 =======
+Add to Gemfile:
+gem "free_relic"
 
-Example application using this plugin https://github.com/tonic20/FreeRelicTest
+Run application and go to /free_relic/
 
-Copyright (c) 2011 devmen.com, released under the MIT license
+Sample application here https://github.com/tonic20/FreeRelicTest
+
+
+Homepage
+==========
+https://github.com/devmen/FreeRelic
+
+
+Copyright (c) 2011 [name of plugin creator], released under the MIT license
 
