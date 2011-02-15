@@ -6,12 +6,12 @@ $ rake install
 
 Usage
 =======
-Add to Gemfile:
+Add to application Gemfile:
 gem "free_relic"
 
 Run application and go to /free_relic/
 
-Sample application here https://github.com/tonic20/FreeRelicTest
+Sample application here https://github.com/devmen/FreeRelicTest
 
 
 Homepage
@@ -19,5 +19,5 @@ Homepage
 https://github.com/devmen/FreeRelic
 
 
-Copyright (c) 2011 [name of plugin creator], released under the MIT license
+Copyright (c) 2011 devmen.com, released under the MIT license
 
