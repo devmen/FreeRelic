@@ -1,9 +1,10 @@
-require 'mongoid'
-require 'free_relic/engine'
 require 'active_support/notifications'
+require 'mongoid'
+require 'free_relic/mute_middleware'
+require 'free_relic/engine'
 
 ActiveSupport::Notifications.subscribe do |*args|
-  FreeRelic::Metric.store!(args)
+  FreeRelic::Metric.store!(args) unless FreeRelic.mute?
 end
 
 module FreeRelic

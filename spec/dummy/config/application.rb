@@ -44,6 +44,9 @@ module Dummy
 
     config.generators do |g|  
       g.orm             :active_record  
-    end  
+    end
+
+    # Configure pathes that won't be logged for metrics
+    # config.metrics.mute_regexp = %r{} 
   end
 end
