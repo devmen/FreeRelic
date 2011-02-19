@@ -1,12 +1,25 @@
+# encoding: UTF-8
+require 'rubygems'
 begin
-  require "jeweler"
-  Jeweler::Tasks.new do |gem|
-    gem.name = "free_relic"
-    gem.summary = "FreeRelic"
-    gem.files = Dir["{lib}/**/*", "{app}/**/*", "{config}/**/*"]
-    gem.homepage    = "http://github.com/devmen/freerelic"
-  end
-rescue
-  puts "Jeweler or one of its dependencies is not installed."
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
+require 'rake'
+require 'rake/rdoctask'
+
+require 'rspec/core'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
+
+task :default => :spec
+
+Rake::RDocTask.new(:rdoc) do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = 'FreeRelic'
+  rdoc.options << '--line-numbers' << '--inline-source'
+  rdoc.rdoc_files.include('README.rdoc')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end

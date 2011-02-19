@@ -1,0 +1,582 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (5.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (293.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-18 02:46:04 +0700
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@freerelic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2011-02-18 02:46:07 +0700
+
+ActionController::RoutingError (No route matches "/user"):
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@freerelic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-18 02:46:13 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-18 02:46:15 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (8.1ms)
+Rendered users/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-18 02:46:21 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4ITQeZW7K4bLeTzlWYuSmBU1JLm2LPDOcOzilEGwNw=", "user"=>{"name"=>"test", "age"=>"20"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5d7b0d69a997b1fe000002
+Completed 302 Found in 4ms
+
+
+Started GET "/users/4d5d7b0d69a997b1fe000002" for 127.0.0.1 at 2011-02-18 02:46:21 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5d7b0d69a997b1fe000002"}
+Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-18 02:46:24 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-18 02:46:25 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (4.8ms)
+Rendered users/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-18 02:46:28 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4ITQeZW7K4bLeTzlWYuSmBU1JLm2LPDOcOzilEGwNw=", "user"=>{"name"=>"test2", "age"=>"21"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5d7b1469a997b1fe000004
+Completed 302 Found in 4ms
+
+
+Started GET "/users/4d5d7b1469a997b1fe000004" for 127.0.0.1 at 2011-02-18 02:46:28 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5d7b1469a997b1fe000004"}
+Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-18 02:46:30 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-18 02:46:31 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (5.2ms)
+Rendered users/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-18 02:46:37 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4ITQeZW7K4bLeTzlWYuSmBU1JLm2LPDOcOzilEGwNw=", "user"=>{"name"=>"test3", "age"=>"22"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5d7b1e69a997b1fe000006
+Completed 302 Found in 3ms
+
+
+Started GET "/users/4d5d7b1e69a997b1fe000006" for 127.0.0.1 at 2011-02-18 02:46:38 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5d7b1e69a997b1fe000006"}
+Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/4d5d7b1e69a997b1fe000006/edit" for 127.0.0.1 at 2011-02-18 02:46:39 +0700
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4d5d7b1e69a997b1fe000006"}
+Rendered users/_form.html.erb (5.3ms)
+Rendered users/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-18 02:46:41 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-18 04:18:13 +0700
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@freerelic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-18 04:18:20 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-18 04:18:26 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 53ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-18 04:18:29 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-18 04:18:30 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 42ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-18 04:18:30 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 76ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-18 04:18:33 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (7.8ms)
+Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-18 04:18:36 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4ITQeZW7K4bLeTzlWYuSmBU1JLm2LPDOcOzilEGwNw=", "user"=>{"name"=>"asdasd", "age"=>"21"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5d90ac69a997b500000002
+Completed 302 Found in 4ms
+
+
+Started GET "/users/4d5d90ac69a997b500000002" for 127.0.0.1 at 2011-02-18 04:18:36 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5d90ac69a997b500000002"}
+Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-18 04:18:36 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4ITQeZW7K4bLeTzlWYuSmBU1JLm2LPDOcOzilEGwNw=", "user"=>{"name"=>"asdasd", "age"=>"21"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5d90ac69a997b500000003
+Completed 302 Found in 3ms
+
+
+Started GET "/users/4d5d90ac69a997b500000003" for 127.0.0.1 at 2011-02-18 04:18:36 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5d90ac69a997b500000003"}
+Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-18 04:18:38 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-18 04:18:42 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 77ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-19 00:32:20 +0700
+
+ActionController::RoutingError (No route matches "/"):
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:26 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (462.2ms)
+Completed 200 OK in 514ms (Views: 480.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:29 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 77ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:29 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 00:32:34 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-19 00:32:35 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (9.2ms)
+Rendered users/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-19 00:32:38 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSvC0fgLocugVHMTw0bc0kEr4O/Jk2xcuzXZQRix6kk=", "user"=>{"name"=>"dasda", "age"=>"sadad"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5ead3669a99709c6000002
+Completed 302 Found in 3ms
+
+
+Started GET "/users/4d5ead3669a99709c6000002" for 127.0.0.1 at 2011-02-19 00:32:38 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5ead3669a99709c6000002"}
+Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:41 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:41 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:42 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 39ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:43 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:43 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 40ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:43 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 76ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:44 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 75ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:44 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 75ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:45 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:45 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:32:45 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 39ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:35:24 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:37:35 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:37:35 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 47ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:37:35 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 77ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:37:36 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 74ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:37:36 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 41ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:37:36 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 40ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:39:48 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 00:39:51 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-19 00:39:52 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (4.9ms)
+Rendered users/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-19 00:39:54 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSvC0fgLocugVHMTw0bc0kEr4O/Jk2xcuzXZQRix6kk=", "user"=>{"name"=>"hfgh", "age"=>"fgh"}, "commit"=>"Create User"}
+Redirected to http://0.0.0.0:3000/users/4d5eaeea69a99709c6000004
+Completed 302 Found in 3ms
+
+
+Started GET "/users/4d5eaeea69a99709c6000004" for 127.0.0.1 at 2011-02-19 00:39:55 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4d5eaeea69a99709c6000004"}
+Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 00:39:56 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:39:58 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 76ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/4d5d7b0d69a997b1fe000002" for 127.0.0.1 at 2011-02-19 00:40:01 +0700
+  Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SSvC0fgLocugVHMTw0bc0kEr4O/Jk2xcuzXZQRix6kk=", "id"=>"4d5d7b0d69a997b1fe000002"}
+Redirected to http://0.0.0.0:3000/users
+Completed 302 Found in 2ms
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 00:40:01 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/4d5d7b1469a997b1fe000004" for 127.0.0.1 at 2011-02-19 00:40:02 +0700
+  Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SSvC0fgLocugVHMTw0bc0kEr4O/Jk2xcuzXZQRix6kk=", "id"=>"4d5d7b1469a997b1fe000004"}
+Redirected to http://0.0.0.0:3000/users
+Completed 302 Found in 2ms
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 00:40:02 +0700
+  Processing by UsersController#index as HTML
+Rendered users/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:40:04 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 52ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic" for 127.0.0.1 at 2011-02-19 00:43:56 +0700
+  Processing by FreeRelicController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/index.html.erb within layouts/application (38.0ms)
+Completed   in 109ms
+
+ActionView::Template::Error (can't convert nil into an exact number):
+    14:     <tr>
+    15:       <td><%= metric.name %></td>
+    16:       <td><%= metric.duration %>us</td>
+    17:       <td><%= time_ago_in_words metric.started_at %> ago</td>
+    18:       <td>
+    19:         <% metric.payload.each do |k, v| %>
+    20:           <p><b><%= k.humanize %></b><br /> <%= v %></p>
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 11:57:02 +0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+Completed   in 173ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (39.5ms)
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (99.5ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateUsers (20110219045227)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "age" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110219045227')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-19 11:58:01 +0700
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 114ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-02-19 11:58:03 +0700
+  Processing by UsersController#new as HTML
+Rendered users/_form.html.erb (50.0ms)
+Rendered users/new.html.erb within layouts/application (92.8ms)
+Completed 200 OK in 106ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-19 11:58:06 +0700
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bULV/Kckb4KyXYS4TxBwWerLXs5HbadY1o8EIKXZOC8=", "user"=>{"name"=>"123123", "age"=>"123123"}, "commit"=>"Create User"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "age", "created_at", "updated_at") VALUES ('123123', 123123, '2011-02-19 04:58:06.909239', '2011-02-19 04:58:06.909239')[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 95ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-02-19 11:58:07 +0700
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/free_relic/metrics" for 127.0.0.1 at 2011-02-19 11:58:14 +0700
+
+ActionController::RoutingError (uninitialized constant FreeRelic::MetricsController):
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (38.2ms)
+
+
+Started GET "/free_relic/metrics" for 127.0.0.1 at 2011-02-19 12:00:55 +0700
+  Processing by FreeRelic::MetricsController#index as HTML
+Completed   in 51ms
+
+ActionView::MissingTemplate (Missing template free_relic/metrics/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/kes/Projects/engine/free_relic/spec/dummy/app/views", "/Users/kes/Projects/engine/free_relic/app/views"):
+  
+
+Rendered /Users/kes/.rvm/gems/ruby-1.9.2-p136@free_relic/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (28.3ms)
+
+
+Started GET "/free_relic/metrics" for 127.0.0.1 at 2011-02-19 12:01:49 +0700
+  Processing by FreeRelic::MetricsController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/metrics/index.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_relic/metrics" for 127.0.0.1 at 2011-02-19 12:02:22 +0700
+  Processing by FreeRelic::MetricsController#index as HTML
+Rendered /Users/kes/Projects/engine/free_relic/app/views/free_relic/metrics/index.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)

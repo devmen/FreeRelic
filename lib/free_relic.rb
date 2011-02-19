@@ -1,8 +1,17 @@
-module FreeRelic
-  require 'free_relic/engine' if defined?(Rails)
+require 'mongoid'
+require 'free_relic/engine'
+require 'active_support/notifications'
+
+ActiveSupport::Notifications.subscribe do |*args|
+  FreeRelic::Metric.store!(args)
 end
 
-#ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
-#  Rails.logger.debug(["notification:", name, start, finish, id, payload.inspect].join(" "))
-#nd
+module FreeRelic
+end
 
+Mongoid.configure do |config|
+  name = "freerelic_#{Rails.env}"
+  host = "localhost"
+  config.master = Mongo::Connection.new.db(name)
+  config.persist_in_safe_mode = false
+end

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   namespace :free_relic do
-    root :to => 'pages#index'
+    resources :metrics, :only => [:index, :destroy]
   end
 end
-
