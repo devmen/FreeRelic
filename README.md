@@ -23,6 +23,8 @@ Run the tests
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but $
         
-# Homepage
+## Homepage
 https://github.com/devmen/FreeRelic
-Copyright © 2011 devmen.com, released under the MIT license
+
+## Copyright
+Copyright (c) 2011 devmen.com, released under the MIT license
