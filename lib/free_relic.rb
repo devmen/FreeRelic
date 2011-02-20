@@ -3,11 +3,32 @@ require 'mongoid'
 require 'free_relic/mute_middleware'
 require 'free_relic/engine'
 
-ActiveSupport::Notifications.subscribe do |*args|
-  FreeRelic::Metric.store!(args) unless FreeRelic.mute?
+module FreeRelic
+  def self.queue
+    @queue ||= Queue.new
+  end
+
+  def self.thread
+    @thread ||= Thread.new do
+      while args = queue.pop
+        FreeRelic::Metric.store!(args)
+      end
+    end
+  end
+
+  def self.finish!
+    queue << nil
+    thread.join
+    @thread = nil
+    thread
+  end
 end
 
-module FreeRelic
+FreeRelic.queue
+FreeRelic.thread
+
+ActiveSupport::Notifications.subscribe do |*args|
+  FreeRelic.queue << args unless FreeRelic.mute?
 end
 
 Mongoid.configure do |config|
