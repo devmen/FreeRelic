@@ -1,9 +1,9 @@
 # FreeRelic
 
 
-## Installion
+## Installation
 
-Installion steps for contributors:
+Installation steps for contributors:
     rvm install 1.9.2
     rvm use 1.9.2@free_relic --create
     gem build free_relic.gemspec
