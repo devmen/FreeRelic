@@ -1,6 +1,8 @@
 class FreeRelic::BaseController < ApplicationController
   prepend_around_filter :mute_notifications
 
+  layout "free_relic"
+
   def initialize
     super
 

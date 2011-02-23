@@ -9,6 +9,8 @@ module FreeRelic
     field :started_at, :type => DateTime
     field :created_at, :type => DateTime
 
+    scope :sorted, desc(:created_at)
+
     def self.store!(args)
       metric = new
       metric.parse(args)
@@ -25,3 +27,4 @@ module FreeRelic
     end
   end
 end
+
