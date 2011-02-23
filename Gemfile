@@ -6,5 +6,7 @@ gem "bson_ext",         "~> 1.2.0"
 gem "sqlite3",          "~> 1.3.3"
 gem "rspec-rails",      "~> 2.0"
 gem "database_cleaner"
-gem "mongoid",
-  :git => "https://github.com/mongoid/mongoid.git"
+gem "mongoid", :git => "https://github.com/mongoid/mongoid.git"
+
+gem "rails3-footnotes", :git => "git://github.com/indirect/rails-footnotes.git"
+
