@@ -1,3 +1,5 @@
+# Provide a simple gemspec so you can easily use your enginex
+# project in your rails apps through git.
 Gem::Specification.new do |s|
   s.name = "free_relic"
   s.homepage = "https://github.com/devmen/FreeRelic"
