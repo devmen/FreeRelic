@@ -1,0 +1,18 @@
+--- 
+development: 
+  auth: 
+    :active: false
+    :login: root
+    :password: root
+test: 
+  auth: 
+    :active: true
+    :login: root
+    :password: root
+production: 
+  auth: 
+    :active: true
+    :login: root
+    :password: root
+
+
