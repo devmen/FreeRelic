@@ -8,6 +8,9 @@ ActiveSupport::Notifications.subscribe do |*args|
 end
 
 module FreeRelic
+  def self.path
+    File.expand_path('../..', __FILE__)
+  end
 end
 
 Mongoid.configure do |config|
