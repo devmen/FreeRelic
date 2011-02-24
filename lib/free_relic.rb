@@ -22,6 +22,10 @@ module FreeRelic
     @thread = nil
     thread
   end
+
+  def self.path
+   File.expand_path('../..', __FILE__)
+  end
 end
 
 FreeRelic.queue

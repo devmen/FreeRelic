@@ -1,10 +1,4 @@
 class FreeRelic::MetricsController < ApplicationController
-
-  LOGIN    = 'root'
-  PASSWORD = 'root'
-
-  before_filter :authenticate
-
   prepend_around_filter :mute_notifications
 
   def index
@@ -20,11 +14,5 @@ class FreeRelic::MetricsController < ApplicationController
 
   def mute_notifications
     FreeRelic.mute! { yield }
-  end
-
-  def authenticate
-    authenticate_or_request_with_http_basic do |l, p|
-      l = LOGIN && p = PASSWORD
-    end
   end
 end
