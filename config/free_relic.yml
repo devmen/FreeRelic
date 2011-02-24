@@ -1,18 +1,15 @@
---- 
-development: 
-  auth: 
-    :active: false
-    :login: root
-    :password: root
-test: 
-  auth: 
-    :active: true
-    :login: root
-    :password: root
-production: 
-  auth: 
-    :active: true
-    :login: root
-    :password: root
+development:
+  auth: false
+  login:
+  password:
 
+test:
+  auth: false
+  login:
+  password:
+
+production:
+  auth: true
+  login: root
+  password: root
 

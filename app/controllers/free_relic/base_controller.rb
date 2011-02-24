@@ -14,7 +14,7 @@ class FreeRelic::BaseController < ApplicationController
 
   def authenticate
     authenticate_or_request_with_http_basic do |l, p|
-      FREERELIC_CONFIG[:auth][:active] && l == FREERELIC_CONFIG[:auth][:login] && p == FREERELIC_CONFIG[:auth][:password]
+      !FREERELIC_CONFIG[:auth] || (FREERELIC_CONFIG[:auth] && l == FREERELIC_CONFIG[:login] && p == FREERELIC_CONFIG[:password])
     end
   end
 
