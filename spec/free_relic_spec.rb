@@ -4,7 +4,6 @@ describe FreeRelic do
   def notify_sql
     ActiveSupport::Notifications.instrument "sql.any_orm",
       payload { sleep(0.001) }
-    FreeRelic.finish!
   end
 
   before { FreeRelic::Metric.delete_all }
