@@ -9,10 +9,12 @@
     = javascript_include_tag "../free_relic_public/javascripts/free_relic"
     = javascript_include_tag "../free_relic_public/javascripts/rails"
     = csrf_meta_tag
-
+  
     %title
       = yield(:title)
 
   %body
-    = yield
+    #container
+      #flash_notice{:style=>'display:none;'}  
+      = yield
 

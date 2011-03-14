@@ -10,6 +10,9 @@ module FreeRelic
     field :created_at, :type => DateTime
 
     scope :sorted, desc(:created_at)
+    scope :sql_metrics, where(:name => /^sql\./)
+    scope :by_duration, desc(:duration)
+    scope :http_metrics, where(:name => /^(start_processing|process_action)\./)
 
     def self.store!(args)
       metric = new

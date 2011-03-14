@@ -1,0 +1,35 @@
+%h1 FreeRelic Dashboard
+#wrapper{:style => "margin:0;padding:0;"}
+  #latest{:style => "float:left; width:470px;border:1px solid black"}
+    %h3 Latest Metrics
+    - @latest_metrics.each do |lmetric|
+      .metric
+        %b= lmetric.name
+        %br
+        %b Duration:
+        = lmetric.duration
+
+        %br
+        %hr
+
+  #sql{:style => "float:left; width:470px;margin-left:20px;border:1px solid black"}
+    %h3 Slowest SQL Metrics
+    - @slowest_sql_metrics.each do |sql_metric|
+      .metric
+        %b= sql_metric.name
+        %br
+        %b Duration:
+        = sql_metric.duration
+        %br
+        %hr
+
+  #http{:style => "float:left; width:470px;border:1px solid black"}
+    %h3 Slowest HTTP Metrics
+    - @slowest_http_metrics.each do |http_metric|
+      .metric
+        %b= http_metric.name
+        %br
+        %b Duration:
+        = http_metric.duration
+        %br
+        %hr

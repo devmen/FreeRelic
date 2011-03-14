@@ -23,5 +23,10 @@ class FreeRelic::BaseController < ApplicationController
   def mute_notifications
     FreeRelic.mute! { yield }
   end
+  
+  def destroy_metric
+    @metric = FreeRelic::Metric.find(params[:id])
+    @metric.destroy
+  end
 end
 

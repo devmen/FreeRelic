@@ -5,9 +5,8 @@ class FreeRelic::MetricsController < FreeRelic::BaseController
   end
 
   def destroy
-    @metric = FreeRelic::Metric.find(params[:id])
-    @metric.destroy
-    redirect_to free_relic_index_path
+      destroy_metric
+      redirect_to free_relic_index_path
   end
 end
 

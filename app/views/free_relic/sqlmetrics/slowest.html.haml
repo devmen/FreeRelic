@@ -1,4 +1,5 @@
 %h1 Listing Metrics
+
 %table
   %tr
     %th Name
@@ -6,8 +7,8 @@
     %th Started at
     %th Payload
     %th
-
-  - @metrics.each do |metric|
+    
+  - @sql_metrics.each do |metric|
     %tr
       %td= metric.name
       %td
@@ -24,6 +25,4 @@
             = v
       %td
         = link_to 'Destroy', free_relic_metric_path(metric), :confirm => 'Are you sure?', :method => :delete
-
-= paginate @metrics
 
