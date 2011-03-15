@@ -1,16 +1,17 @@
 class FreeRelic::SqlmetricsController < FreeRelic::BaseController
-
   def index
-    @sql_metrics = FreeRelic::Metric.sql_metrics#.page(params[:page]).sorted
+    @sql_metrics = FreeRelic::Metric.sql_metrics.page(params[:page]).sorted
   end
 
   def slowest
-    @sql_metrics = FreeRelic::Metric.sql_metrics.by_duration#.page(params[:page]).sorted
-    @ref = request.referer
+    @sql_metrics = FreeRelic::Metric.sql_metrics.by_duration.page(params[:page]).sorted
+    render :index
   end
 
   def destroy
-    destroy_metric
-    redirect_to free_relic_index_path
+    @sql_metric = FreeRelic::Metric.find(params[:id])
+    @sql_metric.destroy
+    render :layout => false
   end
 end
+

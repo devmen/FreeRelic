@@ -23,7 +23,7 @@
             %br
             = v
       %td
-        = link_to 'Destroy', free_relic_metric_path(metric), :confirm => 'Are you sure?', :method => :delete
+        = link_to 'Destroy', free_relic_sqlmetric_path(metric), :confirm => 'Are you sure?', :method => :delete
 
 = paginate @metrics
 
