@@ -1,10 +1,10 @@
 class FreeRelic::SqlmetricsController < FreeRelic::BaseController
   def index
-    @sql_metrics = FreeRelic::Metric.sql_metrics.page(params[:page]).sorted
+    @sql_metrics = FreeRelic::Metric.page(params[:page]).sql_metrics.sorted
   end
 
   def slowest
-    @sql_metrics = FreeRelic::Metric.sql_metrics.by_duration.page(params[:page]).sorted
+    @sql_metrics = FreeRelic::Metric.page(params[:page]).sql_metrics.by_duration
     render :index
   end
 
