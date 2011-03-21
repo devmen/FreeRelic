@@ -54,4 +54,26 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+.topline {
+  border: 1px solid #225599;
+}
+.topline ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.topline ul > li {
+  display: inline;
+  float: left;
+}
+
+.topline ul li > a {
+  display: block;
+  padding: .5em 1em;
+}
+
+.topline ul li > a:hover {
+  background-color:red;
+}
 

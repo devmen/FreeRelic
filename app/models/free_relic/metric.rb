@@ -10,10 +10,12 @@ module FreeRelic
     field :created_at, :type => DateTime
 
     scope :sorted, desc(:created_at)
-    scope :sql_metrics, where(:name => /^sql\./)
+    scope :sql_only, where(:name => /^sql\./)
     scope :by_duration, desc(:duration)
-    scope :http_metrics, where(:name => /^(start_processing|process_action)\./)
-
+    scope :http_only, where(:name => /^(start_processing|process_action)\./)
+    
+    paginates_per 10
+    
     def self.store!(args)
       metric = new
       metric.parse(args)

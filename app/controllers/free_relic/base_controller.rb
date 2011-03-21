@@ -17,16 +17,18 @@ class FreeRelic::BaseController < ApplicationController
       !FREERELIC_CONFIG[:auth] || (FREERELIC_CONFIG[:auth] && l == FREERELIC_CONFIG[:login] && p == FREERELIC_CONFIG[:password])
     end
   end
+  
+    
+  def destroy
+    @sql_metric = FreeRelic::Metric.find(params[:id])
+    @sql_metric.destroy
+    render :layout => false
+  end
 
   protected
 
   def mute_notifications
     FreeRelic.mute! { yield }
-  end
-  
-  def destroy_metric
-    @metric = FreeRelic::Metric.find(params[:id])
-    @metric.destroy
   end
 end
 

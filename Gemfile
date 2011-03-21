@@ -1,14 +1,14 @@
 source "http://rubygems.org"
 
-gem "rails",            "~> 3.0.4"
-gem "capybara",         ">= 0.4.0"
-gem "bson_ext",         "~> 1.2.0"
-gem "sqlite3",          "~> 1.3.3"
-gem "rspec-rails",      "~> 2.0"
-gem "haml",             "~> 3.0.25"
-gem "kaminari",         "~> 0.10.4"
+gem "rails",              "~> 3.0.4"
+gem "capybara",           ">= 0.4.0"
+gem "bson_ext",           "~> 1.2.0"
+gem "sqlite3",            "~> 1.3.3"
+gem "rspec-rails",        "~> 2.0"
+gem "haml",               "~> 3.0.25"
+gem "kaminari",           "~> 0.10.4"
+gem "simple-navigation",  "~> 3.2.0"
 gem "database_cleaner"
 gem "mongoid", :git => "https://github.com/mongoid/mongoid.git"
-
 gem "rails3-footnotes", :git => "git://github.com/indirect/rails-footnotes.git"
 
