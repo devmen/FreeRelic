@@ -17,16 +17,6 @@
     #container
       #flash_notice{:style=>'display:none;'}
       = render_navigation
-      .menu
-        .topline
-          %ul
-            %li
-              = link_to 'All Metrics', "#{free_relic_index_path}/metrics/"
-            %li
-              = link_to 'SQL Metrics', "#{free_relic_index_path}/metrics/sql"
-            %li
-              = link_to 'HTTP Metrics', "#{free_relic_index_path}/metrics/http"
-
       = yield
     
 
