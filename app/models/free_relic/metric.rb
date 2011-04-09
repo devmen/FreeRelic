@@ -19,7 +19,7 @@ module FreeRelic
     def self.store!(args)
       metric = new
       metric.parse(args)
-      metric.save!
+      metric.save! unless args[4][:controller] =~ /FreeRelic::/
     end
 
     def parse(args)
