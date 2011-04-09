@@ -9,6 +9,12 @@
         = metric.duration
         = link_to 'Destroy', free_relic_metric_path(metric), :confirm => 'Are you sure?', :method => :delete, :remote => true
         %br
+        - i = 1
+        - metric.payload.each do |k, v|
+          %p
+            %b= k.humanize
+            %br
+            = v
         %hr
         
       
