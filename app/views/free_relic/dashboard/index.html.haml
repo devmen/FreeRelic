@@ -1,6 +1,12 @@
 %h1 FreeRelic Dashboard
-.wrapper{:style => "margin:0;padding:0;"}
-  .block{:style => "float:left; width:470px;border:1px solid black"}
+.wrapper
+  .metrics_paths
+    %h3 Application Paths
+    - @paths.each do |path|
+      = path
+      %br
+
+  .metrics_block
     %h3 Latest Metrics
     - @latest_metrics.each do |metric|
       .metric
@@ -12,7 +18,7 @@
         %br
         %hr
 
-  .block{:style => "float:left; width:470px;margin-left:20px;border:1px solid black"}
+  .metrics_block
     %h3 Slowest SQL Metrics
     - @slowest_sql_metrics.each do |metric|
       .metric
@@ -23,7 +29,7 @@
         %br
         %hr
 
-  .block{:style => "float:left; width:470px;border:1px solid black"}
+  .metrics_block
     %h3 Slowest HTTP Metrics
     - @slowest_http_metrics.each do |metric|
       .metric

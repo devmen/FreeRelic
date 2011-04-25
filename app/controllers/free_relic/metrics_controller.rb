@@ -1,6 +1,5 @@
 class FreeRelic::MetricsController < FreeRelic::BaseController
   def index
-    
     if params[:type] == "sql"
       if params[:sort_by] == "duration"
 	@page_title = "SQL Metrics Sorted by Duration"
@@ -23,7 +22,18 @@ class FreeRelic::MetricsController < FreeRelic::BaseController
       @page_title = "All Metrics"
       @metrics = FreeRelic::Metric.page(params[:page]).sorted
     end
-
+    
+    @paths = []
+    FreeRelic::Metric.all.each do |metric|
+      if path = metric.payload["path"] 
+        @paths << path unless @paths.include?(path)
+      end
+    end
+  end
+  
+  def path_index
+    #raise 'error'
+    @page_title = "Metrix Index by Path"
   end
 end
 

@@ -6,4 +6,3 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :http_metrics, 'HTTP Metrics', "#{free_relic_index_path}/metrics/http"
   end
 end
-"#{free_relic_index_path}/metrics/sql"

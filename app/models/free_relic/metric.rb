@@ -1,7 +1,7 @@
 module FreeRelic
   class Metric
     include Mongoid::Document
-
+#instrumenter_id
     field :name
     field :duration, :type => Integer
     field :instrumenter_id
@@ -13,6 +13,7 @@ module FreeRelic
     scope :sql_only, where(:name => /^sql\./)
     scope :by_duration, desc(:duration)
     scope :http_only, where(:name => /^(start_processing|process_action)\./)
+    scope :by_action, desc(:instrumenter_id)
     
     paginates_per 10
     

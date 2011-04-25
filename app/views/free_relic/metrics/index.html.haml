@@ -1,5 +1,11 @@
+%h1= @page_title
 .wrapper
-  .block{:style => "float:left; width:470px"}
+  .metrics_paths
+    %h3 Application Paths
+    - @paths.each do |path|
+      = path
+      %br
+  .metrics_block
     %h3= @page_title
     - @metrics.each do |metric|
       .metric
